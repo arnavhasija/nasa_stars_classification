@@ -1,4 +1,7 @@
 # nasa_stars_classification
+
+![](/images/img2.jpg)
+
 <h2>Background</h2>
 
 The purpose of this project is to develop a predictive model capable of accurately classifying celestial objects, specifically stars, quasars, and galaxies, based on their distinct spectral characteristics. Spectral characteristics refer to the unique patterns of light emitted or absorbed by these celestial bodies, which can reveal essential information about their nature, composition, and physical properties.
@@ -17,7 +20,7 @@ I have always been intrigued by outer space and all that surrounds us in this un
 
 Last year, when I saw the highest-resolution image of the universe captured by the James Webb Space Telescope it blew me away, and appreciate everything there is yet to be learned about this universe. This level of resolution allows astronomers to study the structure and evolution of galaxies in unprecedented detail. The image could contribute significantly to our understanding of the universe and reveal many previously unknown objects and phenomena. It remains one of the most detailed and comprehensive images of the universe ever captured. Seeing the birth and death of millions of stars makes me feel more connected and makes me want to dwell and feel the presence of every star surrounding us. I often stare at the night sky as it helps make everything I worry about feel so trivial.  I feel that it is very calming to spend time looking at the sky and contemplating the vastness of the universe. It seems to put my problems and worries into perspective and helps me feel more grounded and at peace.
 
-![](/images/img1.JPG)
+![](/images/img3.JPG)
 
 <h2>Dataset</h2>
 
