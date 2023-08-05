@@ -75,3 +75,14 @@ To achieve these objectives, the project will involve the following steps:
 <b>Application to New Data</b>: Deploying the trained model to classify new, previously unseen celestial objects based on their spectral data. This application will enable astronomers to efficiently analyze and categorize a vast amount of data obtained from ongoing and future sky surveys.
 
 This project's ultimate goal is to empower astronomers with a powerful tool for classifying stars, quasars, and galaxies based on their spectral characteristics. By leveraging machine learning techniques, the project seeks to deepen our understanding of the cosmos, unravel the mysteries of the universe's evolution, and contribute to the advancement of astronomical research.
+
+
+<h2>Exploratory Data Analysis (EDA)</h2>
+
+The EDA focused on boxplots, density plots, and a correlation heatmap to gain insights into the data. The key findings are as follows:
+
+Boxplots: Through boxplots, I visualized the distribution of feature values for each class ("STAR," "GALAXY," and potentially "QUASAR") separately. Notably, features "u," "g," "z," "i," and "r" displayed a few outliers in their distributions. These outliers may impact the performance of the predictive model and should be addressed using appropriate data cleansing and outlier handling techniques.
+
+Density Plot: The density plot allowed me to visualize the Probability Density Function (PDF) for each feature based on the target class. I observed considerable overlap in the distributions of feature values for different classes. This implies that simple logical statements based on individual feature values may not suffice for accurate classification. As such, I recognize the need to employ advanced statistical modeling methods to effectively categorize the classes.
+
+Correlation Heatmap: By analyzing the correlation heatmap, I identified the strength and direction of linear relationships between features. Notably, "u" and "g," "u" and "z," as well as "g" and "z" exhibited perfect positive correlations (correlation coefficient of 1). Additionally, "i" and "r" displayed a very strong positive correlation (correlation coefficient of 0.96). However, most other features had relatively low correlation coefficients (close to 0), indicating weak or no linear relationships.
