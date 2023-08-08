@@ -81,8 +81,24 @@ This project's ultimate goal is to empower astronomers with a powerful tool for 
 
 The EDA focused on boxplots, density plots, and a correlation heatmap to gain insights into the data. The key findings are as follows:
 
-Boxplots: Through boxplots, I visualized the distribution of feature values for each class ("STAR," "GALAXY," and potentially "QUASAR") separately. Notably, features "u," "g," "z," "i," and "r" displayed a few outliers in their distributions. These outliers may impact the performance of the predictive model and should be addressed using appropriate data cleansing and outlier handling techniques.
+<b>Boxplots</b>: Through boxplots, I visualized the distribution of feature values for each class ("STAR," "GALAXY," and potentially "QUASAR") separately. Notably, features "u," "g," "z," "i," and "r" displayed a few outliers in their distributions. These outliers may impact the performance of the predictive model and should be addressed using appropriate data cleansing and outlier handling techniques.
 
-Density Plot: The density plot allowed me to visualize the Probability Density Function (PDF) for each feature based on the target class. I observed considerable overlap in the distributions of feature values for different classes. This implies that simple logical statements based on individual feature values may not suffice for accurate classification. As such, I recognize the need to employ advanced statistical modeling methods to effectively categorize the classes.
+![](/images/img4.jpg)
 
-Correlation Heatmap: By analyzing the correlation heatmap, I identified the strength and direction of linear relationships between features. Notably, "u" and "g," "u" and "z," as well as "g" and "z" exhibited perfect positive correlations (correlation coefficient of 1). Additionally, "i" and "r" displayed a very strong positive correlation (correlation coefficient of 0.96). However, most other features had relatively low correlation coefficients (close to 0), indicating weak or no linear relationships.
+<b>Density Plot</b>: The density plot allowed me to visualize the Probability Density Function (PDF) for each feature based on the target class. I observed considerable overlap in the distributions of feature values for different classes. This implies that simple logical statements based on individual feature values may not suffice for accurate classification. As such, I recognize the need to employ advanced statistical modeling methods to effectively categorize the classes.
+
+<b>Correlation Heatmap</b>: By analyzing the correlation heatmap, I identified the strength and direction of linear relationships between features. Notably, "u" and "g," "u" and "z," as well as "g" and "z" exhibited perfect positive correlations (correlation coefficient of 1). Additionally, "i" and "r" displayed a very strong positive correlation (correlation coefficient of 0.96). However, most other features had relatively low correlation coefficients (close to 0), indicating weak or no linear relationships.
+
+![](/images/img6.jpg)
+
+<h2>Feature Engineering</h2>
+
+The feature engineering was performed in two steps - first I calculated the magnitude differences and next feature interactions were created for bands and redshift. 
+
+<b>1. Magnitude Differences:</b>
+The feature engineering step of "Magnitude Differences" involves computing the differences between magnitudes in different bands (u, g, r, i, z). I create new features that represent the differences in brightness between adjacent bands. The differences in magnitudes can provide valuable information about the spectral characteristics of the objects. The variations in brightness across different bands can be indicative of the object's nature, such as its temperature, composition, or distance. By creating "Magnitude Differences," I aim to capture spectral variations in the objects, helping my model to distinguish different classes based on their unique brightness patterns across different bands.
+
+<b>2. Magnitude-Spectral Index Interactions:</b>
+The feature engineering step of "Magnitude-Spectral Index Interactions" involves interacting the magnitudes in different bands (u, g, r, i, z) with the spectral index (redshift). The redshift is a measure of how much an object's light has been shifted towards longer wavelengths due to the expansion of the universe. By interacting the magnitudes with the redshift, I aim to capture how the object's brightness in different bands changes as a function of its redshift. The interactions between magnitudes and the spectral index can reveal how an object's brightness varies with its distance from us. This is essential because the redshift is an important parameter for classifying objects like galaxies and quasars, as it provides information about their cosmological distance.
+
+The feature engineering steps I performed aim to create new features that enhance the representation of the data and capture important spectral characteristics of the objects in the dataset. These engineered features can potentially improve my model's ability to discern subtle patterns and enhance its predictive performance. Additionally, they provide the model with richer information, enabling it to make more informed decisions when classifying stars, quasars, and galaxies based on their spectral characteristics.
