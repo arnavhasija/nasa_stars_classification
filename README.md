@@ -64,6 +64,11 @@ Overall, this dataset provides a comprehensive collection of information that al
 
 To achieve these objectives, the project will involve the following steps:
 
+<b>Exploratory Data Analysis (EDA)</b>: EDA will involve visually and statistically examining the dataset's features, distributions, relationships, and potential patterns. EDA serves as a foundation for informed decision-making during subsequent stages of the project. I will create various visualizations to gain insights into the distribution and relationships of the features. The visualizations will include:
+- Box plots to identify potential outliers and variations across different classes
+- Density plots to visualize feature distributions
+- Correlation heatmap to understand feature interactions and potential multicollinearity
+
 <b>Feature Engineering</b>: Extracting relevant features from the spectral data that capture the distinguishing characteristics of each celestial object. This could involve techniques such as dimensionality reduction and feature selection to focus on the most informative aspects.
 
 <b>Model Development</b>: Designing and training a robust machine learning model that can learn from the spectral features and classify objects accurately. Various algorithms and architectures, such as support vector machines, random forests, or convolutional neural networks, may be explored and fine-tuned to achieve optimal performance.
@@ -102,3 +107,13 @@ The feature engineering step of "Magnitude Differences" involves computing the d
 The feature engineering step of "Magnitude-Spectral Index Interactions" involves interacting the magnitudes in different bands (u, g, r, i, z) with the spectral index (redshift). The redshift is a measure of how much an object's light has been shifted towards longer wavelengths due to the expansion of the universe. By interacting the magnitudes with the redshift, I aim to capture how the object's brightness in different bands changes as a function of its redshift. The interactions between magnitudes and the spectral index can reveal how an object's brightness varies with its distance from us. This is essential because the redshift is an important parameter for classifying objects like galaxies and quasars, as it provides information about their cosmological distance.
 
 The feature engineering steps I performed aim to create new features that enhance the representation of the data and capture important spectral characteristics of the objects in the dataset. These engineered features can potentially improve my model's ability to discern subtle patterns and enhance its predictive performance. Additionally, they provide the model with richer information, enabling it to make more informed decisions when classifying stars, quasars, and galaxies based on their spectral characteristics.
+
+<h2>Model Development</h2>
+
+In the quest to accurately classify stars, quasars, and galaxies based on their spectral characteristics, the Random Forest Classifier was employed as a robust and powerful tool.
+
+Central to the success of this endeavor was the utilization of the Label Binarizer technique. Given the multi-class nature of the classification task—stars, quasars, and galaxies—the Label Binarizer played a crucial role in transforming categorical labels into a binary matrix format. This transformation facilitated the model's ability to comprehend and distinguish between different classes effectively.
+
+Initially, the Label Binarizer was employed to fit and transform the training labels (y_train). This process encoded the multi-class labels into a binary matrix suitable for model training. It enabled the Random Forest Classifier to grasp the distinct categories present in the target variable. Following the training label encoding, the Label Binarizer was also applied to transform the cross-validation (y_cv) and test labels (y_test).
+
+Using the Label Binarizer alongside the Random Forest Classifier really boosted the performance of the classification process. The Random Forest model I ended up with showed an impressive F1-score of 0.97, highlighting its ability to effectively decipher complex spectral patterns and differentiate between stars, quasars, and galaxies.
