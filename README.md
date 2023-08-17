@@ -141,3 +141,31 @@ I followed these steps for hyperparameter tuning:
 <b>Performance Evaluation</b>: I assessed the tuned model's performance on the test dataset to ensure that the hyperparameter tuning process did not lead to overfitting.
 
 Hyperparameter tuning is an indispensable step in the model development pipeline as it fine-tunes the model for optimal performance. The strategic utilization of this technique enhances the model's predictive capabilities and prepares it for real-world challenges.
+
+<h2>Alternative Models</h2>
+
+Upon achieving a good F1 score with the Random Forest (RF) model, I wanted to explore alternative modeling approaches. The motivation behind this was to determine whether other techniques could further improve the classification performance. The first contender on my list was XGBoost, a formidable model known for its adeptness in handling complex datasets. It presented itself as a sophisticated evolution of RF, introducing a range of hyperparameters to fine-tune. I planned to experiment with parameters such as the learning rate and tree depth, to unlock the model's latent potential and enhance the F1 score.
+
+The table below shows a comparison of the types of models I wanted to explore.
+
+| Model | Interpretability  | Computation Speed | Cons| Best Use Cases|
+| ------------- | ------------- | ------------- | ------------- |------------- |
+| Random Forest  | Moderate  | Moderate  | Prone to overfitting on noisy data | General classification  |
+| XGBoost  | 	Low | Moderate  | Slightly more complex to tune | Medium to large datasets |
+| Support Vector Machines (SVM) | Low | Low  | Can be sensitive to hyperparameters and kernel choice | High-dimensional data |
+| Neural Networks | Low to Moderate | Variable  | Requires more data and extensive tuning and resource-intensive | Complex data patterns |
+
+For this project, I decided to focus on using Random Forest and XGBoost as they are both powerful ensemble learning algorithms. The choice between them often depends on the specific characteristics of the dataset. Below is a comparison of these two models in terms of several key aspects.
+
+<b>Accuracy</b>: XGBoost generally performs better in terms of predictive accuracy and can handle complex relationships between features and target variables. It often achieves higher accuracy due to its advanced regularization techniques and optimization algorithms. Random Forest is also accurate and performs well for a wide range of datasets. However, it may not handle extremely complex relationships as effectively as XGBoost.
+
+<b>Interpretability</b>: XGBoost's predictive power often comes at the cost of interpretability. It can be more challenging to interpret the feature importance and interactions due to its complexity.
+Random Forest: Random Forest is generally more interpretable than XGBoost. It provides straightforward feature importance rankings and insights into feature interactions.
+
+<b>Speed and Scalability</b>: XGBoost is often faster and more scalable than Random Forest. It is designed for efficiency and can handle large datasets more effectively, making it suitable for real-time and big data applications. While Random Forest is efficient, XGBoost's optimization techniques make it better suited for large datasets with many features.
+
+<b>Handling Imbalanced Data</b>: XGBoost has techniques to handle imbalanced data, such as using class weights and focusing on misclassification errors. Random Forest may struggle with imbalanced data and may require additional techniques, such as resampling or adjusting class weights.
+
+<b>Hyperparameter Tuning</b>: XGBoost has a wide range of hyperparameters to fine-tune, which can lead to superior performance with proper tuning. This, however, requires careful experimentation and can be time-consuming. Random Forest has fewer hyperparameters to tune, which can make it quicker to find an initial well-performing model.
+
+Therefore, XGBoost tends to excel in predictive accuracy and scalability, making it a go-to choice for many applications. However, if interpretability and simplicity are key, Random Forest might be a better option. I decided to try out both of these models in this project as there often tends to be a trade-off between accuracy and interpretability.
