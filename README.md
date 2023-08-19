@@ -169,3 +169,19 @@ Random Forest: Random Forest is generally more interpretable than XGBoost. It pr
 <b>Hyperparameter Tuning</b>: XGBoost has a wide range of hyperparameters to fine-tune, which can lead to superior performance with proper tuning. This, however, requires careful experimentation and can be time-consuming. Random Forest has fewer hyperparameters to tune, which can make it quicker to find an initial well-performing model.
 
 Therefore, XGBoost tends to excel in predictive accuracy and scalability, making it a go-to choice for many applications. However, if interpretability and simplicity are key, Random Forest might be a better option. I decided to try out both of these models in this project as there often tends to be a trade-off between accuracy and interpretability.
+
+<h2>XGBoost Model</h2>
+
+To further enhance the classification accuracy, F1-score, and overall predictive capabilities I built an XGBoost model. XGBoost model's robustness lies in its adaptability to complex data and its capacity to handle intricate relationships within features. Furthermore, XGBoost's ensemble nature, combining the predictions of multiple models, mitigates overfitting risks and enhances generalization. While my initial Random Forest model showcased commendable F1-scores, I aspired for even higher levels of precision, recall, and overall predictive accuracy. XGBoost is known for its ability to effectively balance precision and recall, a key factor in achieving elevated F1-scores. The model achieves this through a sophisticated interplay of boosting and regularization techniques, optimizing the trade-off between false positives and false negatives. After building the model, I fine-tuned the model using hyperparameter tuning techniques to identify the optimal parameter combination. This ensured that the model adapts well to my specific dataset and maximizes its predictive power.
+
+<h3>Precision, Recall, and F1-Score Analysis</h3>
+
+For the GALAXY class, the model demonstrates exceptional precision of 0.98, signifying that when it predicts an object as a galaxy, it is correct 98% of the time. Additionally, the recall of 0.99 implies that the model captures 99% of all actual galaxies. This combination of high precision and recall leads to an impressive F1-score of 0.98, indicating a robust ability to accurately classify galaxies.
+
+The QSO class also showcases remarkable performance. The model achieves a precision of 0.96, meaning that 96% of objects predicted as QSOs are indeed QSOs. The recall of 0.93 indicates that the model identifies 93% of all actual QSOs. This balance between precision and recall contributes to an F1-score of 0.95, highlighting the model's effectiveness in recognizing QSOs.
+
+For the STAR class, the model attains the highest level of precision and recall, both equating to 1.00. This signifies that the model's predictions for stars are consistently correct, and it captures all instances of actual stars. Consequently, the F1-score of 1.00 reflects the model's impeccable ability to classify stars with complete accuracy.
+
+The overall accuracy of the tuned XGBoost model is an impressive 0.98, denoting that it correctly classifies celestial objects nearly 98% of the time. The macro average F1-score of 0.98 demonstrates the model's balanced performance across all classes, further affirming its generalization ability.
+
+Therefore, the tuned XGBoost model delivers exceptional results with high precision, recall, and F1-scores for each class. Its ability to accurately classify celestial objects as galaxies, quasars, or stars showcases its potential for a variety of astronomical applications, such as object categorization and identification in large-scale sky surveys. The successful outcome of the tuned XGBoost model emphasizes its significance as a valuable tool in advancing our understanding of celestial bodies and their intricate characteristics.
