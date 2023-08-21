@@ -176,6 +176,10 @@ To further enhance the classification accuracy, F1-score, and overall predictive
 
 <h3>Precision, Recall, and F1-Score Analysis</h3>
 
+Below is the confusion matrix obtained when the prediction was made using the test data.
+
+![](/images/img8.JPG)
+
 For the GALAXY class, the model demonstrates exceptional precision of 0.98, signifying that when it predicts an object as a galaxy, it is correct 98% of the time. Additionally, the recall of 0.99 implies that the model captures 99% of all actual galaxies. This combination of high precision and recall leads to an impressive F1-score of 0.98, indicating a robust ability to accurately classify galaxies.
 
 The QSO class also showcases remarkable performance. The model achieves a precision of 0.96, meaning that 96% of objects predicted as QSOs are indeed QSOs. The recall of 0.93 indicates that the model identifies 93% of all actual QSOs. This balance between precision and recall contributes to an F1-score of 0.95, highlighting the model's effectiveness in recognizing QSOs.
@@ -185,3 +189,17 @@ For the STAR class, the model attains the highest level of precision and recall,
 The overall accuracy of the tuned XGBoost model is an impressive 0.98, denoting that it correctly classifies celestial objects nearly 98% of the time. The macro average F1-score of 0.98 demonstrates the model's balanced performance across all classes, further affirming its generalization ability.
 
 Therefore, the tuned XGBoost model delivers exceptional results with high precision, recall, and F1-scores for each class. Its ability to accurately classify celestial objects as galaxies, quasars, or stars showcases its potential for a variety of astronomical applications, such as object categorization and identification in large-scale sky surveys. The successful outcome of the tuned XGBoost model emphasizes its significance as a valuable tool in advancing our understanding of celestial bodies and their intricate characteristics.
+
+<h3>Summary of Findings</h3>
+
+In this project, the goal was to develop an efficient and accurate classification model capable of distinguishing between three distinct classes of celestial objects: stars, galaxies, and quasars. I explored two prominent algorithms, the Random Forest Classifier, and the XGBoost Classifier, to unravel the spectral signatures of these astronomical entities.
+
+Upon rigorous experimentation and tuning, the Random Forest model showcased remarkable capabilities in capturing intricate features within the spectral data. With an impressive F1-score of 0.97, this model obtained good results in classifying stars, galaxies, and quasars. The engineered features, especially those derived from redshift values and color indices, played a pivotal role in enhancing the model's discriminatory ability. The classification report reflected the precision, recall, and overall accuracy achieved, affirming the Random Forest model's proficiency in this astronomical classification task.
+
+Subsequently, I created an XGBoost model to see if it improves the F1 score. This model exhibited exceptional performance as well, attaining an F1-score of 0.98. The precision and recall values for each class further underscored its competence in classification. Features such as redshift-related parameters and magnitude differences again surfaced as influential contributors to the model's accuracy. The classification report bore witness to the model's ability to handle nuanced distinctions between the astronomical categories.
+
+<h3>Next Steps: Productionizing the Model</h3>
+
+With two robust models at hand, the next logical stride is to transition from experimentation to application. Productionizing the model involves deploying it to real-world scenarios where it can provide valuable insights and classifications. The steps to achieve this encompass packaging the model in a format that can be easily integrated into other systems, developing an interface for user interaction, and ensuring scalability and reliability to accommodate varying workloads.
+
+Additionally, continuous monitoring and refinement of the model's performance will be essential to adapt to changing data patterns and maintain its accuracy over time. Collaboration with domain experts and stakeholders can also help in refining the model's predictions and adapting it to specific needs.
